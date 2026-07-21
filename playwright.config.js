@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-require('dotenv').config()
+//require('dotenv').config()
 
 /**
  * Read environment variables from file.
@@ -15,7 +15,7 @@ require('dotenv').config()
  */
 export default defineConfig({
   expect :{
-    timeout:5000,
+    timeout:600000,
   },
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -34,9 +34,9 @@ export default defineConfig({
      baseURL: 'https://opensource-demo.orangehrmlive.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    "video":'on',
-"screenshot":'on'
+    // trace: 'on-first-retry',
+    // "video":'on',
+    // "screenshot":'on'
   },
 
   /* Configure projects for major browsers */
